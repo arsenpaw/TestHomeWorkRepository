@@ -35,7 +35,8 @@ The `SportShoesStore` class manages the inventory of the sports shoe store. It i
 - **Method: `top_selling_sneakers(n=5)`**
   - Description: Retrieves the top `n` best-selling sneakers based on the number of sales.
 
-## Example Usage
+## This is example Usage
+
 
 ```python
 # Create Sneakers instances
