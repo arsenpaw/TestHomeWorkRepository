@@ -148,7 +148,7 @@ class ShoesStore:
             print(item)
 
  
-
+#realization
 if __name__ == '__main__':
     Nike = Sneakers("Nike", 10, "Black", 100, 35, "Leather", 1000)
     Adidas = Sneakers("Adidas", 9, "White", 80, 3, "Mesh", 800)
