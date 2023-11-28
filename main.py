@@ -41,8 +41,6 @@ class Sneakers:
     def __str__(self):
         return f'Brand is: {self.brand},Size is: {self.size} , Color is: {self.color}'
           
-         
-
     @classmethod
     def __validator_brand_name(cls,brand):
         if type(brand) != str:
@@ -115,29 +113,20 @@ class ShoesStore:
             print(f'Material is: {item.material}')
             print('-' * 130)
 
-    def bubble_sort(self, key, reverse=False):
-        n = len(self.inventory)
-        for i in range(n - 1):
-            for j in range(0, n - i - 1):
-                if not reverse:
-                    if getattr(self.inventory[j], key) > getattr(self.inventory[j + 1], key):
-                        self.inventory[j], self.inventory[j + 1] = self.inventory[j + 1], self.inventory[j]
-                else:
-                    if getattr(self.inventory[j], key) < getattr(self.inventory[j + 1], key):
-                        self.inventory[j], self.inventory[j + 1] = self.inventory[j + 1], self.inventory[j]
-
-    def sort_by_price(self):
-        self.bubble_sort('price')
-        return self.inventory
-
+    def sort_by_cost(self):
+        self.__things.sort(key=lambda x: x.price, reverse=True)
+        print('SPRTED BY COST')
+        self.print_inventory()
+      
     def sort_by_quantity(self):
-        self.bubble_sort('quantity', reverse=True)
-        return self.inventory
+        self.__things.sort(key=lambda x: x.quantity, reverse=True)
+        print('SPRTED BY QUANTITY')
+        self.print_inventory()
 
-    def top_selling_sneakers(self, n=5):
-        # Assuming numberOfSales is already sorted in descending order
-        return self.inventory[:n]
-        
+    def sort_by_top(self):
+        self.__things.sort(key=lambda x: x.numberOfSales, reverse=True)
+        print('TOP SNEAKERS')
+        self.print_inventory()
     def chose_by_brand(self,s_brand):
         find_sneakr = []
         for senaker in self.__things:
@@ -148,7 +137,7 @@ class ShoesStore:
             print(item)
 
  
-#realization
+
 if __name__ == '__main__':
     Nike = Sneakers("Nike", 10, "Black", 100, 35, "Leather", 1000)
     Adidas = Sneakers("Adidas", 9, "White", 80, 3, "Mesh", 800)
@@ -159,7 +148,6 @@ if __name__ == '__main__':
     Puma2 = Sneakers("Puma", 4, "Reed", 755, 2, "Suede", 750)    
     ShoesStorePro = ShoesStore(Nike,Adidas,Reebok,Vans,New_Balance,Puma2,Puma)
     WrongSnekaers = Sneakers('wrong info',10,'red',100,34,True,3245)
-    print('Hi Git')
     print(WrongSnekaers.__dict__)
 else:
     print("Code is imported")
