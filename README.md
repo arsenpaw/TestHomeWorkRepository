@@ -7,7 +7,7 @@ Welcome to the Sport Shoes Store! This Python implementation includes classes fo
 ## Sneakers Class
 
 The `Sneakers` class represents individual pairs of sneakers and includes the following attributes:
-
+new
 - **brand:** The brand of the sneakers.
 - **size:** The size of the sneakers.
 - **color:** The color of the sneakers.
