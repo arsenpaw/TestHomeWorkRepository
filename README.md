@@ -5,7 +5,7 @@
 Welcome to the Sport Shoes Store! This Python implementation includes classes for managing sneakers and a sports shoe store. The project consists of two classes: `Sneakers` and `SportShoesStore`. The classes are designed to handle information about individual sneakers and manage the inventory of a sports shoe store.
 
 ## Sneakers Class
-
+new
 The `Sneakers` class represents individual pairs of sneakers and includes the following attributes:
 
 - **brand:** The brand of the sneakers.
